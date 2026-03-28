@@ -16,6 +16,7 @@ body {
   max-width: 420px;
   margin: auto;
   padding: 15px;
+  animation: fadeIn 0.8s ease;
 }
 
 .header {
@@ -32,6 +33,11 @@ body {
   border-radius: 15px;
   margin-bottom: 15px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
 }
 
 label {
@@ -45,6 +51,8 @@ select {
   margin-top: 8px;
   border-radius: 10px;
   border: 1px solid #ddd;
+  font-size: 14px;
+  background: #fafafa;
 }
 
 button {
@@ -55,6 +63,16 @@ button {
   border: none;
   border-radius: 12px;
   font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.02);
+}
+
+button:active {
+  transform: scale(0.98);
 }
 
 .result-card {
@@ -63,6 +81,18 @@ button {
   border-radius: 12px;
   margin-top: 10px;
   border-left: 5px solid #2e7d32;
+  animation: slideUp 0.4s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes slideUp {
+  from {opacity: 0; transform: translateY(15px);}
+  to {opacity: 1; transform: translateY(0);}
 }
 </style>
 </head>
@@ -71,43 +101,44 @@ button {
 
 <div class="container">
 
-<div class="header">🌿 Smart Rythu Assistant</div>
+<div class="header">🌿 Farm Assistant</div>
 
 <div class="card">
-  <label>🔘 Type select cheyandi</label>
+  <label>🔘 Select Type</label>
   <select id="type" onchange="updateProblems()">
-    <option value="">-- Type select cheyandi --</option>
-    <option value="Pest">Pest (Purugulu)</option>
-    <option value="Nutrition">Fertilizer (Poshakam)</option>
+    <option value="">-- Select Type --</option>
+    <option value="Pest">Pest</option>
+    <option value="Nutrition">Fertilizer</option>
   </select>
 </div>
 
+<!-- 🔥 MOVED HERE (2nd) -->
 <div class="card">
-  <label>🐛 Problem select cheyandi</label>
+  <label>🐛 Select Problems</label>
   <select id="problems" multiple size="6"></select>
 </div>
 
 <div class="card">
-  <label>🌿 Stage (Stage select cheyandi)</label>
+  <label>🌿 Stage</label>
   <select id="stage">
-    <option value="">-- Stage select cheyandi --</option>
-    <option>Buds (Bud stage)</option>
-    <option>Flowering (Poolu stage)</option>
-    <option>Medium Size (Madhya size)</option>
+    <option value="">-- Select Stage --</option>
+    <option>Buds</option>
+    <option>Flowering</option>
+    <option>Medium Size</option>
   </select>
 </div>
 
 <div class="card">
-  <label>🌱 Chettu condition</label>
+  <label>🌱 Condition</label>
   <select id="condition">
-    <option value="">-- Condition select cheyandi --</option>
-    <option>Healthy (Baagundi)</option>
-    <option>Normal (Sadharanam)</option>
-    <option>Weak (Balheena)</option>
+    <option value="">-- Select Condition --</option>
+    <option>Healthy</option>
+    <option>Normal</option>
+    <option>Weak</option>
   </select>
 </div>
 
-<button onclick="getSolution()">Solution chupinchandi</button>
+<button onclick="getSolution()">Get Recommendation</button>
 
 <div id="result"></div>
 
@@ -122,7 +153,7 @@ fetch("./data.json")
     dataset = data;
   });
 
-// Update problems
+// Update problems dynamically
 function updateProblems() {
   let type = document.getElementById("type").value;
 
@@ -155,13 +186,13 @@ function getSolution() {
 
   if (!type || !stage || !condition) {
     document.getElementById("result").innerHTML =
-      "⚠ Dayachesi anni fields fill cheyandi";
+      "⚠ Please select all fields";
     return;
   }
 
   if (selectedProblems.length === 0) {
     document.getElementById("result").innerHTML =
-      "⚠ Dayachesi problem select cheyandi";
+      "⚠ Please select at least one problem";
     return;
   }
 
@@ -175,15 +206,15 @@ function getSolution() {
   let output = "";
 
   if (results.length === 0) {
-    output = "❌ Matching solution dorakaledu";
+    output = "❌ No matching solution found";
   } else {
     results.forEach(r => {
       output += `
         <div class="result-card">
-          <b>🌿 Problem: ${r.problem}</b><br><br>
-          🧪 <b>Use cheyali:</b> ${r.solution}<br>
+          <b>🌿 ${r.problem}</b><br><br>
+          🧪 <b>Solution:</b> ${r.solution}<br>
           🔁 <b>Alternative:</b> ${r.alternative}<br>
-          📦 <b>Dose (250L):</b> ${r.dose_250L}<br><br>
+          📦 <b>Dose:</b> ${r.dose_250L}<br><br>
           📖 ${r.uses}
         </div>
       `;
