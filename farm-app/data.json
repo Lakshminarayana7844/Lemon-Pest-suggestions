@@ -1,5 +1,7 @@
 [
+  
   {
+    "group": "Pest",
     "problem": "Mealybug",
     "stage": "Any",
     "condition": "Healthy",
@@ -10,6 +12,7 @@
     "uses": "idi starting stage lo unna mealybug ni control chestundi, plant lo ki vellii inside pests ni kuda champestundi, safe ga use cheyochu"
   },
   {
+    "group": "Pest",
     "problem": "Mealybug",
     "stage": "Any",
     "condition": "Healthy",
@@ -20,6 +23,7 @@
     "uses": "idi systemic insecticide, plant lo ki vellii sap suck chese pests ni control chestundi, medium infestation ki best"
   },
   {
+    "group": "Pest",
     "problem": "Mealybug",
     "stage": "Any",
     "condition": "Healthy",
@@ -30,6 +34,7 @@
     "uses": "idi strong combination, profenofos outside pests ni immediate ga champestundi, imidacloprid inside pests ni control chestundi, heavy infestation ki use cheyyali"
   },
   {
+    "group": "Pest",
     "problem": "Mealybug",
     "stage": "Flowering",
     "condition": "Weak",
@@ -40,6 +45,7 @@
     "uses": "flowering stage lo safe option idi, pests ni control chestundi kani flowers damage kakunda untundi"
   },
   {
+    "group": "Pest",
     "problem": "Mealybug",
     "stage": "Flowering",
     "condition": "Weak",
@@ -50,6 +56,7 @@
     "uses": "idi inside system lo move ayyi hidden mealybugs ni kuda control chestundi, weak trees ki kuda safe option"
   },
   {
+    "group": "Pest",
     "problem": "Mealybug",
     "stage": "Buds",
     "condition": "Normal",
@@ -60,6 +67,7 @@
     "uses": "buds stage lo pests ni early ga control chestundi, future damage ni prevent chestundi"
   },
   {
+    "group": "Pest",
     "problem": "Mealybug",
     "stage": "Buds",
     "condition": "Weak",
@@ -70,6 +78,7 @@
     "uses": "idi strong systemic action tho buds ni protect chestundi, heavy infestation ni reduce chestundi"
   },
   {
+    "group": "Pest",
     "problem": "Mealybug",
     "stage": "Medium Size",
     "condition": "Normal",
@@ -80,6 +89,7 @@
     "uses": "idi fruits forming stage lo pests ni control chestundi, fruit damage ni reduce chestundi"
   },
   {
+    "group": "Pest",
     "problem": "Mealybug",
     "stage": "Medium Size",
     "condition": "Weak",
@@ -89,7 +99,9 @@
     "dose_250L": "200 ml",
     "uses": "idi deep action tho plant lo unna pests ni remove chestundi, weak condition lo kuda effective"
   },
+
   {
+    "group": "Pest",
     "problem": "Thrips",
     "stage": "Buds",
     "condition": "Healthy",
@@ -100,6 +112,7 @@
     "uses": "idi starting stage lo unna thrips ni control chestundi, buds damage kakunda protect chestundi, early spray ki best"
   },
   {
+    "group": "Pest",
     "problem": "Thrips",
     "stage": "Buds",
     "condition": "Normal",
@@ -110,6 +123,7 @@
     "uses": "idi buds stage lo thrips ni control chestundi, flowers formation ni safe ga unchutundi, medium infestation ki correct"
   },
   {
+    "group": "Pest",
     "problem": "Thrips",
     "stage": "Buds",
     "condition": "Weak",
@@ -120,6 +134,7 @@
     "uses": "idi strong action tho heavy thrips ni control chestundi, buds damage ni stop chestundi, fast result istundi"
   },
   {
+    "group": "Pest",
     "problem": "Thrips",
     "stage": "Flowering",
     "condition": "Healthy",
@@ -130,6 +145,7 @@
     "uses": "flowering time lo safe ga pests ni control chestundi, flowers drop kakunda protect chestundi"
   },
   {
+    "group": "Pest",
     "problem": "Thrips",
     "stage": "Flowering",
     "condition": "Normal",
@@ -140,6 +156,7 @@
     "uses": "idi flowering stage lo thrips ni control chestundi, pollination ki ekkuva damage ivvakunda safe ga untundi"
   },
   {
+    "group": "Pest",
     "problem": "Thrips",
     "stage": "Flowering",
     "condition": "Weak",
@@ -150,6 +167,7 @@
     "uses": "idi strong infestation lo fast ga thrips ni reduce chestundi, flowers damage ni immediate ga control chestundi"
   },
   {
+    "group": "Pest",
     "problem": "Thrips",
     "stage": "Medium Size",
     "condition": "Normal",
@@ -160,6 +178,7 @@
     "uses": "idi fruit forming stage lo thrips damage ni reduce chestundi, fruit quality improve chestundi"
   },
   {
+    "group": "Pest",
     "problem": "Thrips",
     "stage": "Medium Size",
     "condition": "Weak",
@@ -169,7 +188,9 @@
     "dose_250L": "125 ml + 75 ml",
     "uses": "idi strong penetration tho thrips ni deep ga control chestundi, weak plants lo kuda effective ga work chestundi"
   },
+  
   {
+    "group": "Pest",
     "problem": "Whiteflies",
     "stage": "Buds",
     "condition": "Healthy",
@@ -180,6 +201,7 @@
     "uses": "idi starting stage lo unna whiteflies ni control chestundi, leaves damage kakunda protect chestundi"
   },
   {
+    "group": "Pest",
     "problem": "Whiteflies",
     "stage": "Buds",
     "condition": "Normal",
@@ -190,6 +212,7 @@
     "uses": "idi sap sucking insects ni control chestundi, sticky honeydew formation ni reduce chestundi"
   },
   {
+    "group": "Pest",
     "problem": "Whiteflies",
     "stage": "Buds",
     "condition": "Weak",
@@ -200,6 +223,7 @@
     "uses": "idi adults tho patu eggs ni kuda control chestundi, heavy infestation ki best option"
   },
   {
+    "group": "Pest",
     "problem": "Whiteflies",
     "stage": "Flowering",
     "condition": "Healthy",
@@ -210,6 +234,7 @@
     "uses": "flowering stage lo safe ga whiteflies ni control chestundi, flowers damage kakunda protect chestundi"
   },
   {
+    "group": "Pest",
     "problem": "Whiteflies",
     "stage": "Flowering",
     "condition": "Normal",
@@ -220,6 +245,7 @@
     "uses": "idi whiteflies population ni reduce chestundi, plant stress ni tagginchutundi"
   },
   {
+    "group": "Pest",
     "problem": "Whiteflies",
     "stage": "Flowering",
     "condition": "Weak",
@@ -230,6 +256,7 @@
     "uses": "idi strong control istundi, weak plants lo kuda effective ga work chestundi"
   },
   {
+    "group": "Pest",
     "problem": "Whiteflies",
     "stage": "Medium Size",
     "condition": "Normal",
@@ -240,6 +267,7 @@
     "uses": "idi fruit stage lo pests ni control chestundi, fruit quality ni protect chestundi"
   },
   {
+    "group": "Pest",
     "problem": "Whiteflies",
     "stage": "Medium Size",
     "condition": "Weak",
@@ -249,7 +277,9 @@
     "dose_250L": "75 ml + 100 ml",
     "uses": "idi heavy infestation ni strong ga control chestundi, plant recovery ki help chestundi"
   },
+
   {
+    "group": "Pest",
     "problem": "Mites",
     "stage": "Buds",
     "condition": "Healthy",
@@ -260,6 +290,7 @@
     "uses": "idi starting stage lo unna mites ni control chestundi, eco-friendly option, plants ki safe ga untundi"
   },
   {
+    "group": "Pest",
     "problem": "Mites",
     "stage": "Buds",
     "condition": "Normal",
@@ -270,6 +301,7 @@
     "uses": "idi mites ni strong ga control chestundi, especially leaf underside lo unna mites ni eliminate chestundi"
   },
   {
+    "group": "Pest",
     "problem": "Mites",
     "stage": "Buds",
     "condition": "Weak",
@@ -280,6 +312,7 @@
     "uses": "idi heavy infestation lo mites ni deep ga control chestundi, eggs stage ni kuda reduce chestundi"
   },
   {
+    "group": "Pest",
     "problem": "Mites",
     "stage": "Flowering",
     "condition": "Healthy",
@@ -290,6 +323,7 @@
     "uses": "flowering stage lo safe option, mites population ni control chestundi without damaging flowers"
   },
   {
+    "group": "Pest",
     "problem": "Mites",
     "stage": "Flowering",
     "condition": "Normal",
@@ -300,6 +334,7 @@
     "uses": "idi mites ni control chestundi, leaves curling and damage ni reduce chestundi"
   },
   {
+    "group": "Pest",
     "problem": "Mites",
     "stage": "Flowering",
     "condition": "Weak",
@@ -310,6 +345,7 @@
     "uses": "idi strong infestation lo fast ga mites ni control chestundi, weak plants lo kuda effective"
   },
   {
+    "group": "Pest",
     "problem": "Mites",
     "stage": "Medium Size",
     "condition": "Normal",
@@ -320,6 +356,7 @@
     "uses": "idi fruit stage lo mites damage ni reduce chestundi, leaf health improve chestundi"
   },
   {
+    "group": "Pest",
     "problem": "Mites",
     "stage": "Medium Size",
     "condition": "Weak",
@@ -329,7 +366,9 @@
     "dose_250L": "150 ml",
     "uses": "idi deep action tho mites ni eliminate chestundi, plant recovery ki help chestundi"
   },
+  
   {
+    "group": "Nutrition",
     "problem": "Leaf Yellow",
     "stage": "Buds",
     "condition": "Healthy",
@@ -340,6 +379,7 @@
     "uses": "idi starting stage lo nitrogen deficiency ni correct chestundi, leaves malli green ga avuthayi, plant growth improve avuthundi"
   },
   {
+    "group": "Nutrition",
     "problem": "Leaf Yellow",
     "stage": "Buds",
     "condition": "Normal",
@@ -350,6 +390,7 @@
     "uses": "idi nitrogen and magnesium deficiency ni correct chestundi, leaf color improve avuthundi, photosynthesis better avuthundi"
   },
   {
+    "group": "Nutrition",
     "problem": "Leaf Yellow",
     "stage": "Buds",
     "condition": "Weak",
@@ -360,6 +401,7 @@
     "uses": "idi severe deficiency ni correct chestundi, plant strength increase avuthundi, leaf drop reduce avuthundi"
   },
   {
+    "group": "Nutrition",
     "problem": "Leaf Yellow",
     "stage": "Flowering",
     "condition": "Healthy",
@@ -370,6 +412,7 @@
     "uses": "idi balanced nutrition ivvadaniki help chestundi, flowering stage lo plant stress tagginchutundi"
   },
   {
+    "group": "Nutrition",
     "problem": "Leaf Yellow",
     "stage": "Flowering",
     "condition": "Normal",
@@ -380,6 +423,7 @@
     "uses": "idi balanced nutrients ivvadaniki help chestundi, leaves green ga untayi, flowers strong ga develop avuthayi"
   },
   {
+    "group": "Nutrition",
     "problem": "Leaf Yellow",
     "stage": "Flowering",
     "condition": "Weak",
@@ -390,6 +434,7 @@
     "uses": "idi severe deficiency ni correct chestundi, weak plants ni recover chestundi, flowering improve avuthundi"
   },
   {
+    "group": "Nutrition",
     "problem": "Leaf Yellow",
     "stage": "Medium Size",
     "condition": "Normal",
@@ -400,6 +445,7 @@
     "uses": "idi fruit stage lo nutrient supply ivvadaniki help chestundi, leaf health maintain chestundi"
   },
   {
+    "group": "Nutrition",
     "problem": "Leaf Yellow",
     "stage": "Medium Size",
     "condition": "Weak",
@@ -410,6 +456,7 @@
     "uses": "idi plant recovery ki help chestundi, fruits growth improve chestundi, deficiency symptoms reduce avuthayi"
   },
   {
+    "group": "Nutrition",
     "problem": "Flower Drop",
     "stage": "Buds",
     "condition": "Healthy",
@@ -420,6 +467,7 @@
     "uses": "idi starting lo unna flower drop ni control chestundi, buds strong ga untayi"
   },
   {
+    "group": "Nutrition",
     "problem": "Flower Drop",
     "stage": "Buds",
     "condition": "Normal",
@@ -430,6 +478,7 @@
     "uses": "idi buds stage lo drop ni reduce chestundi, flowering ki support chestundi"
   },
   {
+    "group": "Nutrition",
     "problem": "Flower Drop",
     "stage": "Buds",
     "condition": "Weak",
@@ -440,6 +489,7 @@
     "uses": "idi weak plants lo buds ni protect chestundi, flower formation improve chestundi"
   },
   {
+    "group": "Nutrition",
     "problem": "Flower Drop",
     "stage": "Flowering",
     "condition": "Healthy",
@@ -450,6 +500,7 @@
     "uses": "idi initial flower drop ni control chestundi, flowers strong ga untayi"
   },
   {
+    "group": "Nutrition",
     "problem": "Flower Drop",
     "stage": "Flowering",
     "condition": "Normal",
@@ -460,6 +511,7 @@
     "uses": "idi potassium and magnesium ivvadam valla flowers hold strong ga untayi"
   },
   {
+    "group": "Nutrition",
     "problem": "Flower Drop",
     "stage": "Flowering",
     "condition": "Weak",
@@ -470,6 +522,7 @@
     "uses": "idi severe flower drop ni control chestundi, flower setting improve avuthundi"
   },
   {
+    "group": "Nutrition",
     "problem": "Flower Drop",
     "stage": "Medium Size",
     "condition": "Healthy",
@@ -480,6 +533,7 @@
     "uses": "idi fruit formation start ayye stage lo drop ni control chestundi"
   },
   {
+    "group": "Nutrition",
     "problem": "Flower Drop",
     "stage": "Medium Size",
     "condition": "Normal",
@@ -490,6 +544,7 @@
     "uses": "idi fruits hold strong ga undadaniki help chestundi, drop reduce chestundi"
   },
   {
+    "group": "Nutrition",
     "problem": "Flower Drop",
     "stage": "Medium Size",
     "condition": "Weak",
@@ -499,7 +554,9 @@
     "dose_250L": "1 kg + 250 g",
     "uses": "idi weak plants lo fruit drop ni control chestundi, plant strength improve chestundi"
   },
+  
   {
+    "group": "Nutrition",
     "problem": "Weak Tree",
     "stage": "Buds",
     "condition": "Weak",
@@ -510,6 +567,7 @@
     "uses": "idi basic nutrition ivvadam valla plant growth improve avuthundi, buds stage lo strength increase avuthundi"
   },
   {
+    "group": "Nutrition",
     "problem": "Weak Tree",
     "stage": "Buds",
     "condition": "Weak",
@@ -520,6 +578,7 @@
     "uses": "idi balanced nutrition ivvadam valla buds strong ga develop avuthayi, plant recovery start avuthundi"
   },
   {
+    "group": "Nutrition",
     "problem": "Weak Tree",
     "stage": "Buds",
     "condition": "Weak",
@@ -530,6 +589,7 @@
     "uses": "idi severe weakness lo plant ni recover chestundi, new growth fast ga start avuthundi"
   },
   {
+    "group": "Nutrition",
     "problem": "Weak Tree",
     "stage": "Flowering",
     "condition": "Weak",
@@ -540,6 +600,7 @@
     "uses": "idi flowering stage lo plant ki basic support ivvadam valla flowers strong ga untayi"
   },
   {
+    "group": "Nutrition",
     "problem": "Weak Tree",
     "stage": "Flowering",
     "condition": "Weak",
@@ -550,6 +611,7 @@
     "uses": "idi flowering time lo plant stress ni reduce chestundi, flower holding improve avuthundi"
   },
   {
+    "group": "Nutrition",
     "problem": "Weak Tree",
     "stage": "Flowering",
     "condition": "Weak",
@@ -560,6 +622,7 @@
     "uses": "idi heavy weakness lo plant ni support chestundi, flowering improve avuthundi, drop reduce avuthundi"
   },
   {
+    "group": "Nutrition",
     "problem": "Weak Tree",
     "stage": "Medium Size",
     "condition": "Weak",
@@ -570,6 +633,7 @@
     "uses": "idi fruit stage lo plant ki energy ivvadam valla growth maintain avuthundi"
   },
   {
+    "group": "Nutrition",
     "problem": "Weak Tree",
     "stage": "Medium Size",
     "condition": "Weak",
@@ -580,6 +644,7 @@
     "uses": "idi fruits develop avvadam ki support chestundi, plant strength improve avuthundi"
   },
   {
+    "group": "Nutrition",
     "problem": "Weak Tree",
     "stage": "Medium Size",
     "condition": "Weak",
