@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Farm Assistant</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #eef5ee;
+}
+
+.container {
+  max-width: 400px;
+  margin: auto;
+  padding: 15px;
+}
+
+.header {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: green;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+#result {
+  display: none;
+}
+
+.result-card {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 15px;
+  margin-top: 10px;
+  border-left: 5px solid green;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">🌿 Farm Assistant</div>
+
+<div class="card">
+  <label>🌿 Stage</label>
+  <select id="stage">
+    <option>Buds</option>
+    <option>Flowering</option>
+    <option>Medium Size</option>
+  </select>
+</div>
+
+<div class="card">
+  <label>🌱 Tree Condition</label>
+  <select id="condition">
+    <option>Healthy</option>
+    <option>Normal</option>
+    <option>Weak</option>
+  </select>
+</div>
+
+<div class="card">
+  <label>🐛 Select Problems</label>
+  <select id="problems" multiple size="6">
+    <option>Mealybug</option>
+    <option>Thrips</option>
+    <option>Whiteflies</option>
+    <option>Mites</option>
+    <option>Leaf Yellow</option>
+    <option>Flower Drop</option>
+    <option>Weak Tree</option>
+  </select>
+</div>
+
+<button onclick="getSolution()">Get Recommendation</button>
+
+<div id="result" class="card"></div>
+
+</div>
+
+<script>
+let dataset = [];
+
+fetch("data.json")
+  .then(res => res.json())
+  .then(data => dataset = data);
+
+function getSolution() {
+  let stage = document.getElementById("stage").value;
+  let condition = document.getElementById("condition").value;
+  let selectedProblems = Array.from(document.getElementById("problems").selectedOptions)
+                              .map(opt => opt.value);
+
+  let results = dataset.filter(item =>
+    selectedProblems.includes(item.problem) &&
+    (item.stage === stage || item.stage === "Any") &&
+    item.condition === condition
+  );
+
+  let resultDiv = document.getElementById("result");
+
+  if (results.length === 0) {
+    resultDiv.style.display = "block";
+    resultDiv.innerHTML = "❌ No matching solution found";
+    return;
+  }
+
+  let output = "<h3>✅ Recommendations</h3>";
+
+  results.forEach(r => {
+    output += `
+      <div class="result-card">
+        <b>🌿 ${r.problem}</b><br><br>
+        <b>🧪 Solution:</b> ${r.solution} <br>
+        <b>🔁 Alternative:</b> ${r.alternative} <br>
+        <b>📦 Dose:</b> ${r.dose_250L} <br><br>
+        <b>📖 Uses:</b> ${r.uses}
+      </div>
+    `;
+  });
+
+  resultDiv.style.display = "block";
+  resultDiv.innerHTML = output;
+}
+</script>
+
+</body>
+</html>
