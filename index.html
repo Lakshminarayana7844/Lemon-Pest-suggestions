@@ -9,7 +9,7 @@
 body {
   margin: 0;
   font-family: -apple-system, sans-serif;
-  background: #eef5ee;
+  background: linear-gradient(135deg, #e8f5e9, #f4fbf4);
 }
 
 .container {
@@ -20,9 +20,9 @@ body {
 
 .header {
   text-align: center;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
-  color: green;
+  color: #1b5e20;
   margin-bottom: 20px;
 }
 
@@ -31,11 +31,12 @@ body {
   padding: 15px;
   border-radius: 15px;
   margin-bottom: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
 }
 
 label {
   font-weight: 600;
+  font-size: 14px;
 }
 
 select {
@@ -49,24 +50,19 @@ select {
 button {
   width: 100%;
   padding: 15px;
-  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  background: linear-gradient(135deg, #43a047, #2e7d32);
   color: white;
   border: none;
   border-radius: 12px;
   font-size: 16px;
-  cursor: pointer;
-}
-
-button:active {
-  transform: scale(0.98);
 }
 
 .result-card {
   background: white;
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 12px;
   margin-top: 10px;
-  border-left: 5px solid green;
+  border-left: 5px solid #2e7d32;
 }
 </style>
 </head>
@@ -75,40 +71,43 @@ button:active {
 
 <div class="container">
 
-<div class="header">🌿 Farm Assistant</div>
+<div class="header">🌿 Smart Rythu Assistant</div>
 
 <div class="card">
-  <label>🔘 Select Type</label>
+  <label>🔘 Type select cheyandi</label>
   <select id="type" onchange="updateProblems()">
-    <option value="Pest">Pest</option>
-    <option value="Nutrition">Fertilizer</option>
+    <option value="">-- Type select cheyandi --</option>
+    <option value="Pest">Pest (Purugulu)</option>
+    <option value="Nutrition">Fertilizer (Poshakam)</option>
   </select>
 </div>
 
 <div class="card">
-  <label>🌿 Stage</label>
-  <select id="stage">
-    <option>Buds</option>
-    <option>Flowering</option>
-    <option>Medium Size</option>
-  </select>
-</div>
-
-<div class="card">
-  <label>🌱 Condition</label>
-  <select id="condition">
-    <option>Healthy</option>
-    <option>Normal</option>
-    <option>Weak</option>
-  </select>
-</div>
-
-<div class="card">
-  <label>🐛 Select Problems (hold Ctrl/Cmd)</label>
+  <label>🐛 Problem select cheyandi</label>
   <select id="problems" multiple size="6"></select>
 </div>
 
-<button onclick="getSolution()">Get Recommendation</button>
+<div class="card">
+  <label>🌿 Stage (Stage select cheyandi)</label>
+  <select id="stage">
+    <option value="">-- Stage select cheyandi --</option>
+    <option>Buds (Bud stage)</option>
+    <option>Flowering (Poolu stage)</option>
+    <option>Medium Size (Madhya size)</option>
+  </select>
+</div>
+
+<div class="card">
+  <label>🌱 Chettu condition</label>
+  <select id="condition">
+    <option value="">-- Condition select cheyandi --</option>
+    <option>Healthy (Baagundi)</option>
+    <option>Normal (Sadharanam)</option>
+    <option>Weak (Balheena)</option>
+  </select>
+</div>
+
+<button onclick="getSolution()">Solution chupinchandi</button>
 
 <div id="result"></div>
 
@@ -117,19 +116,13 @@ button:active {
 <script>
 let dataset = [];
 
-// Load JSON safely
-fetch("data.json")
+fetch("./data.json")
   .then(res => res.json())
   .then(data => {
     dataset = data;
-    updateProblems();
-  })
-  .catch(err => {
-    document.getElementById("result").innerHTML =
-      "❌ Failed to load data.json (Use Live Server)";
   });
 
-// Update problem list based on type
+// Update problems
 function updateProblems() {
   let type = document.getElementById("type").value;
 
@@ -160,9 +153,15 @@ function getSolution() {
     document.getElementById("problems").selectedOptions
   ).map(opt => opt.value);
 
+  if (!type || !stage || !condition) {
+    document.getElementById("result").innerHTML =
+      "⚠ Dayachesi anni fields fill cheyandi";
+    return;
+  }
+
   if (selectedProblems.length === 0) {
     document.getElementById("result").innerHTML =
-      "⚠ Please select at least one problem";
+      "⚠ Dayachesi problem select cheyandi";
     return;
   }
 
@@ -176,15 +175,15 @@ function getSolution() {
   let output = "";
 
   if (results.length === 0) {
-    output = "❌ No matching solution found";
+    output = "❌ Matching solution dorakaledu";
   } else {
     results.forEach(r => {
       output += `
         <div class="result-card">
-          <b>🌿 ${r.problem}</b><br><br>
-          🧪 <b>Solution:</b> ${r.solution}<br>
+          <b>🌿 Problem: ${r.problem}</b><br><br>
+          🧪 <b>Use cheyali:</b> ${r.solution}<br>
           🔁 <b>Alternative:</b> ${r.alternative}<br>
-          📦 <b>Dose:</b> ${r.dose_250L}<br><br>
+          📦 <b>Dose (250L):</b> ${r.dose_250L}<br><br>
           📖 ${r.uses}
         </div>
       `;
